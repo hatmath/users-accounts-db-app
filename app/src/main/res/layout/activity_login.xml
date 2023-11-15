@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:gravity="center"
+android:orientation="vertical"
+android:padding="16dp"
+tools:context=".LoginActivity">
+
+<!-- Champ de saisie pour l'e-mail -->
+<EditText
+    android:id="@+id/emailEditText"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="@string/login_email_hint"
+    android:inputType="textEmailAddress"
+    android:maxLines="1"
+    android:padding="10dp"
+    android:textSize="16sp" />
+
+<!-- Champ de saisie pour le mot de passe -->
+<EditText
+    android:id="@+id/passwordEditText"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="@string/login_password_hint"
+    android:inputType="textPassword"
+    android:maxLines="1"
+    android:padding="10dp"
+    android:textSize="16sp" />
+
+<!-- Bouton de connexion -->
+<Button
+    android:id="@+id/loginButton"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:text="@string/login_connect_btn_text"
+    android:textSize="18sp" />
+
+<!-- Bouton d'inscription -->
+<Button
+    android:id="@+id/signUpButton"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:text="@string/login_register_btn_text"
+    android:textSize="18sp" />
+
+</LinearLayout>
+
+

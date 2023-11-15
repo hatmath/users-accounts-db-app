@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:orientation="vertical"
+                android:padding="16sp">
+
+                <!-- Titre Usager -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_span="2"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/usager_titre"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <!-- Prénom -->
+                <TableRow>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/usager_prenom" />
+                    <EditText
+                        android:id="@+id/prenomEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:inputType="textPersonName" />
+                </TableRow>
+
+                <!-- Nom -->
+                <TableRow>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/usager_nom" />
+                    <EditText
+                        android:id="@+id/nomEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:inputType="textPersonName" />
+                </TableRow>
+
+                <!-- Surnom -->
+                <TableRow>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/usager_surnom" />
+                    <EditText
+                        android:id="@+id/surnomEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:inputType="textPersonName"/>
+                </TableRow>
+
+                <!-- Date de Naissance -->
+                <TableRow>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/usager_naissance" />
+                    <EditText
+                        android:id="@+id/dateNaissanceEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:hint="@string/usager_naissance_hint"
+                        android:inputType="date"
+                        android:textSize="14sp"/>
+                </TableRow>
+
+                <!-- Profession -->
+                <TableRow>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/usager_profession" />
+                    <EditText
+                        android:id="@+id/professionEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:inputType="text" />
+                </TableRow>
+
+                <!-- Email -->
+                <TableRow>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/usager_courriel" />
+                    <EditText
+                        android:id="@+id/emailEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:inputType="textEmailAddress" />
+                </TableRow>
+
+                <!-- Mot de passe -->
+                <TableRow>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/usage_password" />
+                    <EditText
+                        android:id="@+id/passwordEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:inputType="textPassword" />
+                </TableRow>
+
+                <!-- PIN -->
+                <TableRow>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/usager_pin" />
+                    <EditText
+                        android:id="@+id/pinEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:hint="@string/usager_pin_hint"
+                        android:inputType="textPassword"
+                        android:textSize="14sp"/>
+                </TableRow>
+
+                <!-- Permissions -->
+                <TableRow>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/usager_permissions" />
+                    <EditText
+                        android:id="@+id/permissionsEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:hint="@string/usager_permissions_hint"
+                        android:inputType="text"
+                        android:textSize="14sp"/>
+                </TableRow>
+
+                <!-- Est Admin? -->
+                <TableRow>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/usager_estAdmin" />
+                    <CheckBox
+                        android:id="@+id/estAdminCheckBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="left"
+                        android:text=" "/>
+                </TableRow>
+
+                <!-- Est valide? -->
+                <TableRow>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/usager_estValide" />
+                    <CheckBox
+                        android:id="@+id/estValideCheckBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="left"
+                        android:text=" "/>
+                </TableRow>
+            </TableLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="16dp"/>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:orientation="vertical"
+                android:padding="16sp">
+
+                <!-- Titre Adresse -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_span="2"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/usager_adresse_titre"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <!-- Numéro -->
+                <TableRow>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/usager_adresse_numero" />
+                    <EditText
+                        android:id="@+id/numeroEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:inputType="text" />
+                </TableRow>
+
+                <!-- Rue -->
+                <TableRow>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/usager_adresse_rue" />
+                    <EditText
+                        android:id="@+id/rueEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:inputType="text" />
+                </TableRow>
+
+                <!-- Ville -->
+                <TableRow>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/usager_adresse_ville" />
+                    <EditText
+                        android:id="@+id/villeEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:inputType="text" />
+                </TableRow>
+
+                <!-- Province -->
+                <TableRow>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/usager_adresse_province" />
+                    <EditText
+                        android:id="@+id/provinceEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:inputType="text" />
+                </TableRow>
+
+                <!-- Code Postal -->
+                <TableRow>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/usager_adresse_codepostal" />
+                    <EditText
+                        android:id="@+id/codePostalEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:inputType="text" />
+                </TableRow>
+
+                <!-- Pays -->
+                <TableRow>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/usager_adresse_pays" />
+                    <EditText
+                        android:id="@+id/paysEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:inputType="text" />
+                </TableRow>
+
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- FloatingActionButton pour recharger ou lire un utilisateur -->
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/saveUserFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="16dp"
+        app:icon="@android:drawable/ic_menu_save"
+        app:fabSize="normal"
+        app:tint="@android:color/white" />
+
+    <!-- FloatingActionButton pour ajouter un nouvel utilisateur -->
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/addUserFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/saveUserFAB"
+        android:layout_alignParentEnd="true"
+        app:icon="@android:drawable/ic_input_add"
+        app:fabSize="normal"
+        app:tint="@android:color/white"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- FloatingActionButton pour update un utilisateur -->
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/uploadUserFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/addUserFAB"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="16dp"
+        app:icon="@android:drawable/ic_menu_upload"
+        app:fabSize="normal"
+        app:tint="@android:color/white" />
+
+    <!-- FloatingActionButton pour supprimer un utilisateur -->
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/deleteUserFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/uploadUserFAB"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="16dp"
+        app:icon="@android:drawable/ic_menu_delete"
+        app:fabSize="normal"
+        app:tint="@android:color/white" />
+
+</RelativeLayout>
+
+

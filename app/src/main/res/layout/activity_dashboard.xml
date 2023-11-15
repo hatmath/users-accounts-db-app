@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <!-- Titre pour la liste des utilisateurs -->
+    <TextView
+        android:id="@+id/usersListTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/usersListTitle"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <!-- Liste des utilisateurs -->
+        <ListView
+            android:id="@+id/usersListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/border"
+            android:listSelector="@drawable/list_item_selector"
+            android:padding="16sp" />
+    </LinearLayout>
+
+    <!-- Barre de navigation en bas -->
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="2dp"
+        android:background="#E0E0E0">
+
+        <!-- Nom de l'utilisateur connecté -->
+        <TextView
+            android:id="@+id/connectedUser"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:gravity="start"
+            android:text="@string/connectedUser"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+    <!-- Ajouter un nouvel utilisateur -->
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/addUserFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottomNav"
+        android:layout_alignParentEnd="true"
+        app:icon="@android:drawable/ic_input_add"
+        app:fabSize="normal"
+        app:tint="@android:color/black"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Supprimer un utilisateur -->
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/deleteUserFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/addUserFAB"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="16dp"
+        app:icon="@android:drawable/ic_menu_delete"
+        app:fabSize="normal"
+        app:tint="@android:color/white" />
+
+    <!-- Consulter les informations d'un utilisateur -->
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/infoUserFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/deleteUserFAB"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="16dp"
+        app:icon="@android:drawable/ic_menu_info_details"
+        app:fabSize="normal"
+        app:tint="@android:color/white" />
+
+    <!-- Envoyer un e-mail à un utilisateur -->
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/emailUserFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/infoUserFAB"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="16dp"
+        app:icon="@android:drawable/ic_menu_send"
+        app:fabSize="normal"
+        app:tint="@android:color/white" />
+
+</RelativeLayout>

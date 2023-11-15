@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:drawable="@color/itemPressed" android:state_pressed="true" /> <!-- quand pressé -->
+<item android:drawable="@color/itemSelected" android:state_selected="true" /> <!-- quand sélectionné -->
+<item android:drawable="@color/itemChecked" android:state_checked="true" /> <!-- quand coché -->
+<item android:drawable="@color/itemDefault" /> <!-- par défaut -->
+</selector>
